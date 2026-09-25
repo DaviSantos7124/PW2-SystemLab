@@ -43,8 +43,6 @@ E-mail: matheus.calixto@gmail.com
 Senha: 123456 (a senha do professor sempre será 123456)
 ```
 
-Use o e-mail cadastrado no banco para entrar.
-
 ---
 
 ### 🟢 Aluno
