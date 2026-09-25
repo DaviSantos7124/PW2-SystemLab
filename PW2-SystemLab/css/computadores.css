@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* ===== - Topo - ===== */
+
+.topo {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 18px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.logo span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.usuario div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.usuario strong {
+    font-size: 14px;
+}
+
+.usuario span {
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.usuario a {
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.usuario a:hover {
+    background: #dc2626;
+}
+
+/* ===== - Conteúdo - ===== */
+
+.conteudo {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.voltar {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+.titulo {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.titulo p {
+    color: #64748b;
+}
+
+/* ===== - Resumo - ===== */
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.resumo-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.numero {
+    font-size: 27px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.texto {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ===== - Laboratórios - ===== */
+
+.laboratorios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.laboratorio {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.laboratorio-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.laboratorio-topo h3 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.laboratorio-topo p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.status-lab {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ===== - Computadores - ===== */
+
+.computadores-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.computador {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+}
+
+.icone {
+    font-size: 21px;
+}
+
+.computador-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.computador-info strong {
+    font-size: 13px;
+}
+
+.computador-info span {
+    color: #16a34a;
+    font-size: 11px;
+}
+
+.status-funcionando {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* ===== - Responsivo - ===== */
+
+@media (max-width: 900px) {
+
+    .computadores-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .topo {
+        padding: 15px 20px;
+    }
+
+    .usuario div {
+        display: none;
+    }
+
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .computadores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .conteudo {
+        width: 94%;
+    }
+
+    .computadores-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

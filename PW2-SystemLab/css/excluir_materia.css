@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* ===== - Topo - ===== */
+
+.topo {
+    background-color: #ffffff;
+    min-height: 75px;
+    padding: 15px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo h1 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.logo span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.usuario-info strong {
+    font-size: 14px;
+}
+
+.usuario-info span {
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.sair {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #dc2626;
+
+    padding: 9px 16px;
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.sair:hover {
+    background-color: #b91c1c;
+}
+
+/* ===== - Conteúdo - ===== */
+
+.conteudo {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+/* ===== - Confirmação - ===== */
+
+.confirmacao {
+    width: 100%;
+    max-width: 500px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+.icone {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fef2f2;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.confirmacao h2 {
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.confirmacao p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+/* ===== - Matéria - ===== */
+
+.materia {
+    margin: 20px 0;
+
+    padding: 15px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.materia strong {
+    font-size: 16px;
+}
+
+.materia span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.aviso {
+    color: #dc2626 !important;
+
+    font-size: 13px !important;
+
+    margin-bottom: 25px;
+}
+
+/* ===== - Botões - ===== */
+
+.botoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.cancelar,
+.excluir {
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+.cancelar {
+    color: #475569;
+
+    background-color: #ffffff;
+
+    border: 1px solid #cbd5e1;
+}
+
+.cancelar:hover {
+    background-color: #f8fafc;
+}
+
+.excluir {
+    color: #ffffff;
+
+    background-color: #dc2626;
+
+    border: 1px solid #dc2626;
+}
+
+.excluir:hover {
+    background-color: #b91c1c;
+}
+
+/* ===== - Responsivo - ===== */
+
+@media (max-width: 600px) {
+
+    .topo {
+        padding: 15px 20px;
+    }
+
+    .usuario-info {
+        display: none;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .confirmacao {
+        padding: 25px 20px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .cancelar,
+    .excluir {
+        width: 100%;
+        text-align: center;
+    }
+
+}

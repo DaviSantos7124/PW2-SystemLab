@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+
+/* ===== - Topo - ===== */
+
+.topo {
+    background-color: #ffffff;
+    min-height: 75px;
+    padding: 15px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo h1 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.logo span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.usuario-info strong {
+    font-size: 14px;
+}
+
+.usuario-info span {
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.sair {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #dc2626;
+
+    padding: 9px 16px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.sair:hover {
+    background-color: #b91c1c;
+}
+
+/* ===== - Conteúdo - ===== */
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 40px;
+}
+
+.cabecalho {
+    margin-bottom: 25px;
+}
+
+.voltar {
+    display: inline-block;
+
+    color: #2563eb;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+.cabecalho h2 {
+    font-size: 28px;
+
+    margin-bottom: 7px;
+}
+
+.cabecalho p {
+    color: #64748b;
+}
+
+/* ===== - Reserva - ===== */
+
+.reserva-container {
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    padding: 30px;
+}
+
+.titulo-secao {
+    margin-bottom: 30px;
+}
+
+.titulo-secao h3 {
+    font-size: 20px;
+
+    margin-bottom: 6px;
+}
+
+.titulo-secao p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+/* ===== - Mensagens - ===== */
+
+.mensagem {
+    padding: 13px 15px;
+
+    border-radius: 6px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+.mensagem.erro {
+    background-color: #fee2e2;
+
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+}
+
+.mensagem.sucesso {
+    background-color: #dcfce7;
+
+    color: #15803d;
+
+    border: 1px solid #bbf7d0;
+}
+
+/* ===== - Formulário - ===== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    background-color: #ffffff;
+
+    color: #0f172a;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #2563eb;
+}
+
+.campo select {
+    cursor: pointer;
+}
+
+.campo small {
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-top: 6px;
+}
+
+/* ===== - Laboratórios - ===== */
+
+.laboratorios {
+    margin-top: 35px;
+}
+
+.laboratorios-titulo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.laboratorios-titulo h3 {
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.laboratorios-titulo p {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.quantidade {
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.laboratorios-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.laboratorio {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    background-color: #ffffff;
+}
+
+.laboratorio:hover {
+    border-color: #2563eb;
+
+    background-color: #f8fafc;
+}
+
+/* ===== - Laboratório Reservado - ===== */
+
+.laboratorio.indisponivel {
+    background-color: #fef2f2;
+
+    border-color: #fecaca;
+
+    cursor: not-allowed;
+
+    opacity: 0.85;
+}
+
+.laboratorio.indisponivel:hover {
+    background-color: #fef2f2;
+
+    border-color: #fecaca;
+}
+
+.laboratorio input {
+    width: 18px;
+
+    height: 18px;
+
+    cursor: pointer;
+}
+
+.laboratorio.indisponivel input {
+    cursor: not-allowed;
+}
+
+.lab-info {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.lab-info strong {
+    font-size: 14px;
+}
+
+.lab-info span {
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+/* ===== - Status - ===== */
+
+.status {
+    font-size: 11px;
+
+    font-weight: bold;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    white-space: nowrap;
+}
+
+/* ===== - Disponível - ===== */
+
+.status.disponivel {
+    background-color: #dcfce7;
+
+    color: #15803d;
+}
+
+/* ===== - Reservado - ===== */
+
+.status.reservado {
+    background-color: #dc2626 !important;
+
+    color: #ffffff !important;
+}
+
+/* ===== - Atenção - ===== */
+
+.status.atencao {
+    background-color: #fef3c7;
+
+    color: #b45309;
+}
+
+/* ===== - Aviso - ===== */
+
+.aviso {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background-color: #eff6ff;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 5px;
+}
+
+.aviso strong {
+    font-size: 14px;
+}
+
+.aviso p {
+    color: #475569;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+}
+
+/* ===== - Botões - ===== */
+
+.acoes {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.cancelar {
+    text-decoration: none;
+
+    color: #475569;
+
+    padding: 11px 20px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.cancelar:hover {
+    background-color: #f8fafc;
+}
+
+.acoes button {
+    border: none;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.acoes button:hover {
+    background-color: #1d4ed8;
+}
+
+/* ===== - Responsivo - ===== */
+
+@media (max-width: 700px) {
+
+    .topo {
+        padding: 15px 20px;
+    }
+
+    .usuario-info {
+        display: none;
+    }
+
+    .conteudo {
+        padding: 25px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .laboratorios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .laboratorios-titulo {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+/* ===== - Informações da Reserva - ===== */
+.reserva-info {
+    color: #64748b !important;
+    font-size: 12px !important;
+    margin-top: 4px !important;
+}
+
+.laboratorio.indisponivel .reserva-info {
+    color: #b91c1c !important;
+    font-weight: 500;
+}
+
+/* ===== - Status Reservado - ===== */
+.status.reservado {
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+}
+
+/* ===== - Lista de Reservas - ===== */
+
+.reservas-lista {
+    margin-top: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.reservas-lista .titulo-secao {
+    margin-bottom: 25px;
+}
+
+.reservas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.reserva-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.reserva-card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.reserva-card-topo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.reserva-card-topo strong {
+    font-size: 16px;
+}
+
+.reserva-card-topo span {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.reserva-id {
+    background-color: #eff6ff;
+    color: #2563eb !important;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 11px !important;
+    margin-top: 0 !important;
+}
+
+.reserva-detalhes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 18px 0;
+}
+
+.reserva-detalhes div {
+    display: flex;
+    flex-direction: column;
+}
+
+.reserva-detalhes span {
+    color: #64748b;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.reserva-detalhes strong {
+    font-size: 13px;
+}
+
+.form-cancelar {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+.botao-cancelar-reserva {
+    border: none;
+    background-color: #dc2626;
+    color: #ffffff;
+    padding: 9px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.botao-cancelar-reserva:hover {
+    background-color: #b91c1c;
+}
+
+.sem-reservas {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+}
+
+.sem-reservas strong {
+    font-size: 14px;
+}
+
+.sem-reservas span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* ===== - Responsivo - Reservas - ===== */
+
+@media (max-width: 900px) {
+
+    .reserva-detalhes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .reservas-lista {
+        padding: 20px;
+    }
+
+    .reserva-card-topo {
+        flex-direction: column;
+    }
+
+    .reserva-detalhes {
+        grid-template-columns: 1fr;
+    }
+
+}
